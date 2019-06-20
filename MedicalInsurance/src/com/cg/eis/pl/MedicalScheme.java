@@ -113,18 +113,11 @@ public class MedicalScheme {
 					Employee ob=new Employee(id,name,salary,designation);
 					emp.put(ob.getId(),ob);
 					break;
-		case "2":	/*if(salary>5000.00 && salary<20000.00 && designation.equals("System Associate"))
-					System.out.println("Scheme C");
-					else if(salary>=20000.00 && salary<40000.00 && designation.equals("Programmer"))
-					System.out.println("Scheme B");
-					else if(salary>=40000.00 && designation.equals("Manager"))
-					System.out.println("Scheme A");
-					else if(salary<5000.00 && designation.equals("Clerk"))
-					System.out.println("No Scheme");
-					else 
-					System.out.println("Not an Employee");
+		case "2":	System.out.println("Enter ID");
+					id=Integer.parseInt(br.readLine());
+					service.findScheme(emp.get(id));
 					break;
-					*/
+					
 		case "3":	Collection<Employee> vc=emp.values();
 					List<Employee> emplist=new ArrayList<Employee>(vc);
 					for(Employee e:emplist)

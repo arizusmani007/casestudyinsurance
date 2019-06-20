@@ -31,7 +31,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public boolean findScheme(Employee ob) {
 		// TODO Auto-generated method stub
-		return false;
+		if(ob.getSalary()>5000.00 && ob.getSalary()<20000.00 && ob.getDesignation().equals("System Associate"))
+			System.out.println("Scheme C");
+			else if(ob.getSalary()>=20000.00 && ob.getSalary()<40000.00 && ob.getDesignation().equals("Programmer"))
+			System.out.println("Scheme B");
+			else if(ob.getSalary()>=40000.00 && ob.getDesignation().equals("Manager"))
+			System.out.println("Scheme A");
+			else if(ob.getSalary()<5000.00 && ob.getDesignation().equals("Clerk"))
+			System.out.println("No Scheme");
+			else 
+			System.out.println("Not an Employee");
+		return true;
 	}
 	
 }
